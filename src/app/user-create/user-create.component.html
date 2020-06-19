@@ -1,0 +1,35 @@
+<form [formGroup]="user">
+  <h2>Billing Address</h2>
+  <input type="number" name="id" formControlName="id" placeholder="ID"><br>
+  <input type="text" name="name" formControlName="name" placeholder="First Name"><br>
+  <div *ngIf="!user.controls['name'].valid && (user.controls['name'].touched || user.controls['name'].touched)">
+    <div [hidden]="!user.controls['name'].errors.required">
+      Name is required
+    </div>
+    <div [hidden]="user.controls['name'].errors.minLength">
+      Name must be longer than 5 letters
+    </div>
+  </div>
+
+  <input type="text" name="lastName" formControlName="lastName" placeholder="Last Name"><br>
+
+  <input type="text" name="address1" formControlName="address1" placeholder="Address Line 1"><br>
+
+  <input type="text" name="city" formControlName="city" placeholder="city"><br>
+
+  <input type="text" name="country" formControlName="country" placeholder="country"><br>
+
+  <input type="text" name="email" formControlName="email" placeholder="email"><br>
+  <div *ngIf="!user.controls['email'].valid && (user.controls['email'].touched || user.controls['email'].touched)">
+    <div [hidden]="!user.controls['email'].errors.required">
+      Name is required
+    </div>
+    <div [hidden]="user.controls['email'].errors.pattern">
+      Error
+    </div>
+  </div>
+  <br>
+  <div>
+    <button  (click)="create()">REGISTER</button>
+  </div>
+</form>

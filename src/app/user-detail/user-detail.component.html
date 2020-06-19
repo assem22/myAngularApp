@@ -1,0 +1,27 @@
+<form>
+  <h2>Billing Address</h2>
+  <label>ID</label><br>
+  <input type="number" name="id" required [(ngModel)]="user.id"><br>
+
+  <label>name</label><br>
+  <input type="text" name="name" required [(ngModel)]="user.name"><br>
+
+  <label>lastName</label><br>
+  <input type="text" name="lastName" required [(ngModel)]="user.lastName"><br>
+
+  <label>address</label><br>
+  <input type="text" name="address" required [(ngModel)]="user.address"><br>
+
+  <label>city</label><br>
+  <input type="text" name="city" required [(ngModel)]="user.city"><br>
+
+  <label>country</label><br>
+  <input type="text" name="country" required [(ngModel)]="user.country"><br>
+
+  <label for="email">email</label><br>
+  <input id="email" type="text" name="email" required [(ngModel)]="user.email"><br>
+  <br>
+  <div>
+    <button  (click)="updateUser()">REGISTER</button>
+  </div>
+</form>
